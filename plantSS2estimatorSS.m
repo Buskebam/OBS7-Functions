@@ -7,12 +7,13 @@ if ~exist('bundleInputs','var')
 end
 
 estA = A - L*C;
+estC = C;
 if bundleInputs
     estB = [B - L*D, L];
+    estD = [D,0];
 else
     estB = B - L*D;
+    estD = D;
 end
-estC = C;
-estD = D;
 end
 
